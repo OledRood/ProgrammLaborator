@@ -1,5 +1,13 @@
 class Laba2 {
     public static void main(String[] args) {
+        SocialNetwork facebook = new SocialNetwork("Facebook", "/Facebook/mainIcon",
+                0, "Meta", 1, "");
+        facebook.showInfo();
+        // Game civilization = new Game("civilization", "civilization/mainIcon", 0,
+        // "Pamelo", "");
+        // civilization.run();
+        // civilization.populationUpdate(5);
+
     }
 }
 
@@ -25,6 +33,7 @@ abstract class Aplication {
 
     public Aplication() {
         this("Unknow", "/System/images/defaultIcon", 0, "Unknow,", "");
+        countOfAplications++;
     }
 
     public String getName() {
@@ -192,7 +201,8 @@ class Game extends Aplication {
 class Weather extends Aplication {
     private int day;
 
-    public Weather(String name, String iconPath, int unreadNotifications, String developer, String additionalInformation, int day){
+    public Weather(String name, String iconPath, int unreadNotifications, String developer,
+            String additionalInformation, int day) {
         super(name, iconPath, unreadNotifications, developer, additionalInformation);
         this.day = day;
     }
@@ -205,9 +215,9 @@ class Weather extends Aplication {
     public void setDay(int day) {
         this.day = day;
     }
+
     public int getDay() {
         return day;
     }
-
 
 }
